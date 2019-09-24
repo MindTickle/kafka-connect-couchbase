@@ -31,7 +31,7 @@ unzip /app/kafka-connect-couchbase/target/kafka-connect-couchbase-3.4.6-SNAPSHOT
 cp ./config/connect-standalone.properties $KAFKA_HOME/config
 cp ./config/quickstart-couchbase-sink.properties $KAFKA_CONNECT_COUCHBASE_HOME/target/kafka-connect-couchbase-3.4.6-SNAPSHOT/config/
 
-KAFKA_HEAP_OPTS="-Xms1g -Xmx2g"
+KAFKA_HEAP_OPTS="-Xms1g -Xmx1g"
 exec $KAFKA_HOME/bin/connect-standalone.sh $KAFKA_HOME/config/connect-standalone.properties /app/kafka-connect-couchbase/target/kafka-connect-couchbase-3.4.6-SNAPSHOT/config/quickstart-couchbase-sink.properties
 
 set +ex
